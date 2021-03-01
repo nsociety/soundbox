@@ -94,13 +94,5 @@ footer{
     z-index: 5;
 }
 
-@media screen and (min-width: 600px) {
-    .wrapper{
-    flex-direction: row;
-    }
-    .box{
-        width: 130px;
-        height: 130px;
-        font-size: 22px;
-    }
-  } 
+
+
