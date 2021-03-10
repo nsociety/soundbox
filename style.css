@@ -44,6 +44,12 @@ z-index: 5;
     border-radius: 5px;
     background: #435c5e;
     z-index: 1;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5vh;
+    color: rgb(197, 197, 197);
+    line-break: strict;
 }
 
 .container{
@@ -60,17 +66,8 @@ z-index: 5;
     font-size: 4vh;
 }
 
-.box{
-    display: flex; 
-    align-items: center;
-    justify-content: center;
-    font-size: 3.5vh;
-    color: rgb(197, 197, 197);
-    line-break: strict;
-}
-
 #playing {
-    border: 1px solid #449ba1;
+    border: 3px solid #449ba1;
     animation: gradient 2s ease infinite;
 }
 
@@ -94,5 +91,68 @@ footer{
     z-index: 5;
 }
 
+.select-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 3vh;
+    position: relative;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    /* background: #316e72; */
+    color: #449ba1;
+    background: rgb(216, 216, 216);
+    border-radius: 5px; 
+    padding: 10px 20px;
+    height: 50px;
+    width: 300px;
+    position: relative;
+    cursor: pointer;
+    margin: 20px;
+}
+
+.arrow {
+    content: "";
+    position: absolute;
+    top: 19px;
+    right: 25px;
+    width: 8px;
+    height: 8px;
+    border-left: 2px solid #449ba1;
+    border-top: 2px solid #449ba1;
+    transform: rotate(-135deg);
+    transition: all 0.2s ease-in-out;
+}
+
+.option-container{
+    list-style: none;
+    margin-top: 15px;
+    position: relative;
+    background: #435c5e;
+    width: 300px;
+    padding-left: 15px;
+    border-radius: 5px;
+    color: rgb(216, 216, 216);
+    display: none;
+    transition: all 0.4s ease-in-out;
+}
+
+.option{
+    margin: 20px;
+    cursor: pointer;
+}
+
+.active{
+    display: block;
+}
+
+.turned{
+    transform: rotate(45deg);
+    margin-top: 4px;
+}
 
 

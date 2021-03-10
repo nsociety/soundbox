@@ -47,3 +47,13 @@ pads.forEach((pad, indexp) => {
     })
 
 })
+
+let selectCategory = document.querySelector(".title");
+let optionsContainer = document.querySelector(".option-container");
+let title = document.querySelector(".title");
+let arrow =document.querySelector(".arrow")
+
+selectCategory.addEventListener("click", () => {
+optionsContainer.classList.toggle("active");
+arrow.classList.toggle("turned");
+})
