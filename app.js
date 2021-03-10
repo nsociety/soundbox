@@ -48,12 +48,26 @@ pads.forEach((pad, indexp) => {
 
 })
 
-let selectCategory = document.querySelector(".title");
-let optionsContainer = document.querySelector(".option-container");
-let title = document.querySelector(".title");
-let arrow =document.querySelector(".arrow")
+const selectCategory = document.querySelector(".title");
+const optionsContainer = document.querySelector(".option-container");
+const title = document.querySelector(".title");
+const arrow =document.querySelector(".arrow");
+const options = document.querySelectorAll(".option");
+const categoryTitle = document.querySelector(".cat");
 
 selectCategory.addEventListener("click", () => {
 optionsContainer.classList.toggle("active");
 arrow.classList.toggle("turned");
 })
+
+options.forEach((option, index) => {
+
+    option.addEventListener("click", () => {
+        if(option.innerHTML == "AUCUNE") 
+        {categoryTitle.innerText = "CATÉGORIES";}
+        else {categoryTitle.innerText = option.innerHTML;}
+        optionsContainer.classList.remove("active");
+        arrow.classList.remove("turned");
+    })
+
+});
