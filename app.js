@@ -17,6 +17,52 @@ if (document.body.scrollTop > 35 || document.documentElement.scrollTop > 35) {
 
 const pads = document.querySelectorAll('.box');
 const audios = document.querySelectorAll('.sound');
+const sections = Array.from(document.querySelector(".soundbox-container").children);
+
+function checkCategory(choice)
+{
+    console.log(document.height);
+
+    sections.forEach((section, index) => {
+        switch (choice)
+        {
+    
+            case 'AUCUNE' : 
+            section.style.display = 'block';
+            break;
+
+            case 'LES KETTEUSES' :
+            if(section.id == "ketteuses") section.style.display = "block";
+            else section.style.display = "none";
+            break;
+    
+            case 'LE GRUTIER' :
+            if(section.id == "grutier") section.style.display = "block";
+            else section.style.display = "none";
+            break;
+    
+            case 'HAN OUAIS' :
+            if(section.id == "hanouais") section.style.display = "block";
+            else section.style.display = "none";
+            break;
+    
+            case 'VEGA MISSYL' :
+            if(section.id == "vega") section.style.display = "block";
+            else section.style.display = "none";
+            break;
+    
+            case 'DOMINIQUE DE SERAING' :
+            if(section.id == "dominique") section.style.display = "block";
+            else section.style.display = "none";
+            break;
+
+            default:
+            section.style.display = "block";
+
+        }
+    })
+
+}
 
 
 
@@ -63,11 +109,14 @@ arrow.classList.toggle("turned");
 options.forEach((option, index) => {
 
     option.addEventListener("click", () => {
+        
         if(option.innerHTML == "AUCUNE") 
         {categoryTitle.innerText = "CATÉGORIES";}
         else {categoryTitle.innerText = option.innerHTML;}
+        console.log(categoryTitle.innerText);
         optionsContainer.classList.remove("active");
         arrow.classList.remove("turned");
+        checkCategory(categoryTitle.innerText);
     })
 
 });
