@@ -4,10 +4,12 @@ if (document.body.scrollTop > 35 || document.documentElement.scrollTop > 35) {
     document.querySelector('.logo').style.fontSize = "6vh";
     document.querySelector('.logo').innerHTML = "SB";
     document.querySelector('.logo').style.color = "#449ba1";
+    document.querySelector('.logo').style.textShadow = "-1px 5px #0c3330";
     document.querySelector('.header').style.height = "65px";
   } else {
     document.querySelector('.logo').style.fontSize = "8vh";
     document.querySelector('.logo').innerHTML = "SOUND BOX";
+    document.querySelector('.logo').style.textShadow = "-1px 8px #0c3330";
     document.querySelector('.header').style.height = "110px";
     document.querySelector('.logo').style.color = "rgb(224, 224, 224)";
   }
