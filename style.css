@@ -1,83 +1,176 @@
-* {
-    list-style: none;
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
+body{
+    font-family: 'Bebas Neue', cursive; 
+    background: #354849;
+    color: rgb(224, 224, 224);
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    position: relative;
+    min-height: 100vh;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 50px;
+    height: 100%;
+    margin-top: 125px;
+    width: 100%;
+}
+
+header{
+width: 100%;
+height: 110px;
+display: flex;
+align-items: center;
+justify-content: center;
+position: fixed;
+top: 0;
+background: #263536;
+transition: 0.2s;
+z-index: 5;
+}
+
+.logo{
+    font-size: 8vh;
+    transition: 0.1s;
+    text-shadow: -1px 8px #2c2c2c;
+}
+
+
+.box{
+    margin: 5px;
+    width: 21vh;
+    height: 21vh;
+    border-radius: 5px;
+    background: #435c5e;
+    z-index: 1;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5vh;
+    color: rgb(197, 197, 197);
+    line-break: strict;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.titre {
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    margin: 10px 0 10px;
+    width: 100%;
+    font-size: 4vh;
+    position: sticky;
+    top: 65px;
+    left: 0;
+    /* background: #324444; */
+    background: #354849;
+    height: 40px;
+    z-index: 4;
+}
+
+#playing {
+    border: 3px solid #449ba1;
+    animation: gradient 2s ease infinite;
+}
+
+@keyframes gradient {
+    0%{background: #435c5e;}
+    50%{background: #449ba1;}
+    100%{background: #435c5e;}
+}
+
+footer{
+    font-size: 2vh;
+    position: absolute; 
+    bottom: 0px;
+    width: 100%;
+    height: 40px;
+    background: #263536;
+    color: rgb(224, 224, 224);
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    background: linear-gradient(to bottom right, #ff6000, #df5807);
-    font-family: "Poppins", sans-serif;
+    z-index: 5;
+}
+
+.select-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 3vh;
     position: relative;
 }
 
-.container {
-    transform: translateY(-50px);
-}
-
-.title {
-    font-weight: 700;
-    font-size: 1.2rem;
-    color: #fff;
-}
-
-.select-container {
-    width: 300px;
-    margin: 15px auto;
-    position: relative;
-}
-
-.selected-option {
-    background: #fff;
-    border-radius: 5px;
+.title{
+    display: flex;
+    align-items: center;
+    background: #263536;
+    color:  rgb(224, 224, 224);
+    border-radius: 5px; 
     padding: 10px 20px;
+    height: 50px;
+    width: 300px;
+    position: relative;
     cursor: pointer;
+    margin: 15px;
 }
 
-.selected-option::after {
+.arrow {
     content: "";
     position: absolute;
-    top: 18px;
-    right: 18px;
-    width: 6px;
-    height: 6px;
-    border-left: 2px solid #000;
-    border-top: 2px solid #000;
+    top: 19px;
+    right: 25px;
+    width: 8px;
+    height: 8px;
+    border-left: 2px solid rgb(224, 224, 224);
+    border-top: 2px solid rgb(224, 224, 224);
     transform: rotate(-135deg);
+    transition: all 0.3s ease-in-out;
+}
+
+.option-container{
+    list-style: none;
+    margin-top: 15px;
+    position: relative;
+    background: #263536;
+    width: 300px;
+    padding-left: 15px;
+    border-radius: 5px;
+    color:  rgb(224, 224, 224);
+    display: none;
     transition: all 0.4s ease-in-out;
 }
 
-.active .selected-option::after {
-    top: 20px;
-    transform: rotate(45deg);
-}
-
-.options-container {
-    position: absolute;
-    top: 55px;
-    left: 0;
-    width: 100%;
-    background: #fff;
-    border-radius: 5px;
-    overflow: hidden;
-    transform: rotateX(90deg);
-    transform-origin: top;
-    transition: transform 0.3s ease-in-out;
-}
-
-.active .options-container {
-    transform: rotateX(0);
-}
-
-.option {
-    padding: 10px 20px;
+.option{
+    margin: 20px;
     cursor: pointer;
 }
 
-.option:hover {
-    background: #f3975e;
+.active{
+    display: block;
 }
+
+.turned{
+    transform: rotate(45deg);
+    margin-top: 4px;
+}
+
