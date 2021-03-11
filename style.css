@@ -127,8 +127,8 @@ footer{
     right: 25px;
     width: 8px;
     height: 8px;
-    border-left: 2px solid #b4d7da;
-    border-top: 2px solid #b4d7da;
+    border-left: 2px solid rgb(224, 224, 224);
+    border-top: 2px solid rgb(224, 224, 224);
     transform: rotate(-135deg);
     transition: all 0.3s ease-in-out;
 }
