@@ -154,11 +154,31 @@ footer{
     background: #263536;
     width: 300px;
     padding-left: 15px;
+    padding-top: 5px;
     border-radius: 5px;
     color:  rgb(224, 224, 224);
     display: none;
     transition: all 0.4s ease-in-out;
+    max-height: 250px;
+    overflow-y: scroll;
 }
+
+
+  .option-container::-webkit-scrollbar-track {
+    border-radius: 0 5px 5px 0;
+    background-color: #263536;
+  }
+  
+  .option-container::-webkit-scrollbar {
+    width: 6px;
+    height: 250px;
+  }
+  
+  .option-container::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #435c5e;
+    padding: 3px;
+  }
 
 .option{
     margin: 20px;
@@ -166,7 +186,8 @@ footer{
 }
 
 .active{
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 
 .turned{
