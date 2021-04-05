@@ -58,6 +58,11 @@ function checkCategory(choice)
             else section.style.display = "none";
             break;
 
+            case 'WALID' :
+            if(section.id == "walid") section.style.display = "block";
+            else section.style.display = "none";
+            break;
+
             default:
             section.style.display = "block";
 
